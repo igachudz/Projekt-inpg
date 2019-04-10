@@ -1,0 +1,8 @@
+for( _A_; _B_; _C_ )
+     _D_;
+
+//lub:
+for( _A_; _B_; _C_ )
+{
+    //blok instrukcji
+}
