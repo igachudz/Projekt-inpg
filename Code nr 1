@@ -1,0 +1,16 @@
+bool czyGodzinaPoprawna( int godz, int min, int sek )
+{
+    std::cout << "Jestem w funkcji czyGodzinaPoprawna" << std::endl;
+    if( godz < 0 || godz > 23 )
+         return false;
+   
+    std::cout << "Godzina jest poprawna" << std::endl;
+    if( min < 0 || min > 59 )
+         return false;
+   
+    std::cout << "Godziny i minuty sa poprawne" << std::endl;
+    if( sek < 0 || sek > 59 ) return false;
+   
+    std::cout << "Czas jest poprawny" << std::endl;
+    return true;
+}
