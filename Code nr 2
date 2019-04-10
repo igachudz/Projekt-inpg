@@ -1,0 +1,33 @@
+#include <iostream>
+
+bool czyGodzinaPoprawna( int godz, int min, int sek )
+{
+    if( godz < 0 || godz > 23 )
+         return false;
+   
+    if( min < 0 || min > 59 )
+         return false;
+   
+    if( sek < 0 || sek > 59 )
+         return false;
+   
+    return true;
+}
+
+void komunikatCzasu( bool bWynik )
+{
+    if( bWynik )
+         std::cout << "Czas jest poprawny" << std::endl;
+    else
+         std::cout << "Czas jest niepoprawny" << std::endl;
+   
+}
+
+int main()
+{
+    komunikatCzasu( czyGodzinaPoprawna( 24, 30, 50 ) );
+    komunikatCzasu( czyGodzinaPoprawna( 12, 88, 50 ) );
+    komunikatCzasu( czyGodzinaPoprawna( 1, 00, 99 ) );
+    komunikatCzasu( czyGodzinaPoprawna( 7, 33, 01 ) );
+    return 0;
+}
